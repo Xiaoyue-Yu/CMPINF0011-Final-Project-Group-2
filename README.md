@@ -9,7 +9,7 @@
 ##### Team members and their email addresses：
 
 * Xiaoyue Yu - xiy249@pitt.edu
-* Boyi Sun
+* Boyi Sun - bos69@pitt.edu
 * Liangyu Zhao
 
 
