@@ -78,10 +78,9 @@ Work Completed (Check-in):
 - Aggregated to daily per site: for each site × day, used max AQI across pollutants to represent overall daily exposure.
 - Computed site-level metrics: median_daily_aqi, p90_daily_aqi, healthy_rate (AQI ≤ 100), and a composite BNAS score (0–100) with transparent weights (median 50%, p90 30%, healthy-rate 20%).
 
-Generated two visualizations:
+Generated one visualization:
 
 - Air Quality Ranking by Site (daily) for 2024–2025.
-- 
 
 Future Work:
 
