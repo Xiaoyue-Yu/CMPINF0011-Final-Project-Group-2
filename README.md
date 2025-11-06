@@ -12,13 +12,9 @@ xxx
 * Boyi Sun - bos69@pitt.edu
 * Liangyu Zhao
 
-
-
 ##### Canvas group number：
 
 Group 2
-
-
 
 ##### A one-sentence overview of the repository：
 
@@ -26,15 +22,15 @@ This repository contains the work for CMPINF 0011 Final Project - Group 2, where
 
 ##### Overall Metric
 
-Our team's overarching metric is to find the "Best Neighborhood for Retirement". We are combining three sub-metrics to determine this:
+Our team's overarching metric is to find the "Best Neighborhood for Retirees". In order to quantitatively analyse "best neighborhood", we establish an index to accurately rank the "Best Neighborhood for Retirees" by integrating three weighted sub-metrics as follows.
 
-Safety: (Low crime incidents)
+- Safety: (Low crime incidents)
 
-Infrastructure:
+- Infrastructure index
 
-Air Condition: Air Quality Cleanliness(AQI per site)
+- Air Condition: Air Quality Cleanliness(AQI per site)
 
-Individual Analysis & Datasets
+##### Individual Analysis & Datasets
 As required, each team member's individual analysis is in the personal_notebooks folder.
 
 1. Xiaoyue Yu - Safety Analysis
@@ -121,9 +117,9 @@ Work Completed (Check-in):
 
 Future Work:
 
-- Add a reasonable weight on different type of citypark facilities. For example, give a lager weight to the citypark facilities in the type "senior", making it more reasonable for our overall metric: Best neighborhood for **retirees**"
-- Take other relavent data into considertaion.
-- Exclude the data point that may be not suitable for analysis on retirees, such as the facilities in the playgound for the children.
+- Add a reasonable weight on different type of citypark facilities. For example, give a lager weight to the citypark facilities in the type "senior", making it more reasonable for our overall metric: Best neighborhood for **retirees**.
+- Take ertra relavent data into considertaion.
+- Exclude the data point that may not be suitable for analysis on a specific population(retirees), such as the facilities in the playgound for the children.
 
 Key Findings:
 
