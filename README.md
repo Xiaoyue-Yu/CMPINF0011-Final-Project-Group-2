@@ -1,39 +1,37 @@
 # CMPINF0011-Final-Project-Group-2
 
+## Team name：
+Jet2Holiday✈
 
-
-##### Team name：
-Jet2Holiday
-
-
-##### Team members and their email addresses：
+## Team members and their email addresses：
 
 * Xiaoyue Yu - xiy249@pitt.edu
-* Boyi Sun - bos69@pitt.edu
 * Liangyu Zhao - liz294@pitt.edu
+* Boyi Sun - bos69@pitt.edu
 
-##### Canvas group number：
+
+## Canvas group number：
 
 Group 2
 
-##### A one-sentence overview of the repository：
+## A one-sentence overview of the repository：
 
 This repository contains the work for CMPINF 0011 Final Project - Group 2, where we analyze data to determine the best neighborhood in Pittsburgh using various datasets and metrics.
 
-##### Overall Metric
+## Overall Metric
 
 Our team's overarching metric is to find the "Best Neighborhood for Retirees". In order to quantitatively analyse "best neighborhood", we establish an index to accurately rank the "Best Neighborhood for Retirees" by integrating three weighted sub-metrics as follows.
 
 - Safety: (Low crime incidents)
 
-- Infrastructure index
-
 - Air Condition: Air Quality Cleanliness(AQI per site)
 
-##### Individual Analysis & Datasets
+- Infrastructure index
+
+## Individual Analysis & Datasets
 As required, each team member's individual analysis is in the personal_notebooks folder.
 
-1. Xiaoyue Yu - Safety Analysis
+### 1. Xiaoyue Yu - Safety Analysis
 Notebook: personal_notebooks/xiaoyue_analysis.ipynb
 
 - Sub-metric: Safety, measured by the number of police-reported crime incidents.
@@ -66,7 +64,7 @@ Key Findings:
 - Data normalization will provide more accurate safety assessments
 - Filtering by crime type will help focus on safety concerns most relevant to retirees
 
-2. Liangyu Zhao - Air Condition Analysis
+### 2. Liangyu Zhao - Air Condition Analysis
 Notebook: personal_notebooks/Murphy_analysis.ipynb
 
 - Sub-metric: Air Quality Cleanliness (daily), measured by the worst-of-day AQI per site (max AQI across pollutants each day).
@@ -99,7 +97,7 @@ Key Findings:
 - The worst-of-day AQI methodology ensures spikes in any pollutant are reflected in daily exposure.
 - Current Top-ranked site by BNAS over 2024-01-01 → 2025-10-31 is strong.
 
-3. Boyi Sun - Infrastructure Analysis
+### 3. Boyi Sun - Infrastructure Analysis
 
 - Sub-metric: The number of a specific facility in the neighborhood(e.g., park facilities)
 - Dataset: City_facilitis_of_Pittsburgh
