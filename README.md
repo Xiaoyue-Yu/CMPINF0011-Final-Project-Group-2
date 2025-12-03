@@ -93,6 +93,7 @@ Methodology:
 - Neighborhood level: assign each neighborhood the score of its nearest monitor.
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Generated two visualizations:
 
 - Air Quality Ranking by Site (daily) for 2024–2025.
@@ -102,6 +103,11 @@ Generated two visualizations:
 Results:
 >>>>>>> Stashed changes
 
+=======
+
+Results:
+
+>>>>>>> Stashed changes
 - Ranking table: personal_notebooks/outputs/air_quality_site_metrics_daily_2024_2025.csv
 - Ranking chart: personal_notebooks/outputs/site_air_quality_ranking_daily_2024_2025.png
 - Neighborhood map: personal_notebooks/outputs/neighborhood_air_quality_map.png
@@ -111,5 +117,36 @@ Key Findings:
 
 - Air quality varies substantially across sites; top sites generally show lower typical exposure and a higher share of healthy days.
 - Using worst-of-day AQI ensures peaks in any pollutant are reflected in the daily exposure and final score.
+<<<<<<< Updated upstream
+=======
+
+### 3. Boyi Sun - Infrastructure Analysis
+
+- Sub-metric: The number of a specific facility in the neighborhood(e.g., park facilities)
+- Dataset: City_facilitis_of_Pittsburgh
+- File used: `data/City_Facilities_of_Pittsburgh.csv`
+
+Work Completed (Check-in):
+
+- Loaded the city facilities data of Pittsburgh using pandas
+- Analyzed the primary users of city facility 
+- Counted the facility number and the citipark number by neighborhood respectively
+- Visualization :
+    - Primary_user of facilities
+    - Top 20 neighborhoods by the number of facilities
+    - Top 20 neighborhoods by the number of park facilities
+
+Future Work:
+
+- Add a reasonable weight on different type of citypark facilities. For example, give a lager weight to the citypark facilities in the type "senior", making it more reasonable for our overall metric: Best neighborhood for **retirees**.
+- Take ertra relavent data into considertaion.
+- Exclude the data point that may not be suitable for analysis on a specific population(retirees), such as the facilities in the playgound for the children.
+
+Key Findings:
+
+- The top three primary users in the dataset is `Department of Public Work`, `Citiparks`, and `Department of Public Safety`.
+- The number of facilities is varied from neighborhood to neighborhood.
+- The number of park facilities is not much different. Adding a weight on different types may make the analysis more strict to retirees.
+>>>>>>> Stashed changes
 
 
