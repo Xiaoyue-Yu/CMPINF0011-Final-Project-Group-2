@@ -1,43 +1,37 @@
 # CMPINF0011-Final-Project-Group-2
 
+## Team name：
+Jet2Holiday✈
 
-
-##### Team name：
-xxx
-
-
-##### Team members and their email addresses：
+## Team members and their email addresses：
 
 * Xiaoyue Yu - xiy249@pitt.edu
+* Liangyu Zhao - liz294@pitt.edu
 * Boyi Sun - bos69@pitt.edu
-* Liangyu Zhao
 
 
-
-##### Canvas group number：
+## Canvas group number：
 
 Group 2
 
-
-
-##### A one-sentence overview of the repository：
+## A one-sentence overview of the repository：
 
 This repository contains the work for CMPINF 0011 Final Project - Group 2, where we analyze data to determine the best neighborhood in Pittsburgh using various datasets and metrics.
 
-##### Overall Metric
+## Overall Metric
 
-Our team's overarching metric is to find the "Best Neighborhood for Retirement". We are combining three sub-metrics to determine this:
+Our team's overarching metric is to find the "Best Neighborhood for Retirees". In order to quantitatively analyse "best neighborhood", we establish an index to accurately rank the "Best Neighborhood for Retirees" by integrating three weighted sub-metrics as follows.
 
-Safety: (Low crime incidents)
+- Safety: (Low crime incidents)
 
-Infrastructure:
+- Air Condition: Air Quality Cleanliness(AQI per site)
 
-Air Condition: Air Quality Cleanliness(AQI per site)
+- Infrastructure index
 
-Individual Analysis & Datasets
+## Individual Analysis & Datasets
 As required, each team member's individual analysis is in the personal_notebooks folder.
 
-1. Xiaoyue Yu - Safety Analysis
+### 1. Xiaoyue Yu - Safety Analysis
 Notebook: personal_notebooks/xiaoyue_analysis.ipynb
 
 - Sub-metric: Safety, measured by the number of police-reported crime incidents.
@@ -70,7 +64,7 @@ Key Findings:
 - Data normalization will provide more accurate safety assessments
 - Filtering by crime type will help focus on safety concerns most relevant to retirees
 
-2. Liangyu Zhao - Air Condition Analysis
+### 2. Liangyu Zhao - Air Condition Analysis
 Notebook: personal_notebooks/Murphy_analysis.ipynb
 
 - Sub-metric: Air Quality Cleanliness (daily), using each site’s worst-of-day AQI (the maximum AQI across pollutants per day) as that day’s overall exposure.
@@ -92,22 +86,8 @@ Methodology:
         Inverted scaling for median/p90 (lower → higher score), positive scaling for healthy-rate.
 - Neighborhood level: assign each neighborhood the score of its nearest monitor.
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-Generated two visualizations:
-
-- Air Quality Ranking by Site (daily) for 2024–2025.
-- 
-=======
-
-Results:
->>>>>>> Stashed changes
-
-=======
-
 Results:
 
->>>>>>> Stashed changes
 - Ranking table: personal_notebooks/outputs/air_quality_site_metrics_daily_2024_2025.csv
 - Ranking chart: personal_notebooks/outputs/site_air_quality_ranking_daily_2024_2025.png
 - Neighborhood map: personal_notebooks/outputs/neighborhood_air_quality_map.png
@@ -117,8 +97,6 @@ Key Findings:
 
 - Air quality varies substantially across sites; top sites generally show lower typical exposure and a higher share of healthy days.
 - Using worst-of-day AQI ensures peaks in any pollutant are reflected in the daily exposure and final score.
-<<<<<<< Updated upstream
-=======
 
 ### 3. Boyi Sun - Infrastructure Analysis
 
@@ -147,6 +125,5 @@ Key Findings:
 - The top three primary users in the dataset is `Department of Public Work`, `Citiparks`, and `Department of Public Safety`.
 - The number of facilities is varied from neighborhood to neighborhood.
 - The number of park facilities is not much different. Adding a weight on different types may make the analysis more strict to retirees.
->>>>>>> Stashed changes
 
 
