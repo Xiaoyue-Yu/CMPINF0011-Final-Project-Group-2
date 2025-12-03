@@ -67,34 +67,36 @@ Key Findings:
 ### 2. Liangyu Zhao - Air Condition Analysis
 Notebook: personal_notebooks/Murphy_analysis.ipynb
 
-- Sub-metric: Air Quality Cleanliness (daily), measured by the worst-of-day AQI per site (max AQI across pollutants each day).
+- Sub-metric: Air Quality Cleanliness (daily), using each site’s worst-of-day AQI (the maximum AQI across pollutants per day) as that day’s overall exposure.
 - Dataset: Daily Air Condition (2024–2025)
-- File Used: data/2024-October 31, 2025 Monthly Criminal Activity Dataset.xlsx
+- File Used:    data/2024-October 31, 2025 Monthly Criminal Activity Dataset.xlsx
+                (Mapping) Official neighborhood boundaries: data/Neighborhoods_.shp
 
-Work Completed (Check-in):
+Methodology:
 
-- Loaded the 2024–2025 Monthly Air Condition dataset using pandas.
+- Time window: 2024-01-01 → 2025-10-31 (right-open at 2025-11-01).
 - Cleaned and verified fields; standardized column names.
-- Aggregated to daily per site: for each site × day, used max AQI across pollutants to represent overall daily exposure.
-- Computed site-level metrics: median_daily_aqi, p90_daily_aqi, healthy_rate (AQI ≤ 100), and a composite BNAS score (0–100) with transparent weights (median 50%, p90 30%, healthy-rate 20%).
+- Daily aggregation: for each site × day, take the maximum AQI across pollutants as the daily aqi.
+- Site-level metrics:
+        median_daily_aqi (typical exposure, lower is better), 
+        p90_daily_aqi (tail/peak risk, lower is better),
+        healthy_rate (share of days with AQI ≤ 100, higher is better)
+- Scoring (BNAS, 0–100): Min–Max normalization on the three metrics with weights:
+        median 0.6, p90 0.3, healthy-rate 0.1
+        Inverted scaling for median/p90 (lower → higher score), positive scaling for healthy-rate.
+- Neighborhood level: assign each neighborhood the score of its nearest monitor.
 
-Generated one visualization:
+Results:
 
-- Air Quality Ranking by Site (daily) for 2024–2025.
-
-Future Work:
-
-- Map Sites → Neighborhoods: Use neighborhood boundaries to aggregate site results to official Pittsburgh neighborhoods for the final team metric.
-
-- Normalize & Combine: Incorporate additional WPRDC datasets and combine sub-metrics with sensitivity analysis on weights.
-
-- Parameterization: Add toggles for the date window and sub-metric weights to streamline iterating in the group notebook.
+- Ranking table: personal_notebooks/outputs/air_quality_site_metrics_daily_2024_2025.csv
+- Ranking chart: personal_notebooks/outputs/site_air_quality_ranking_daily_2024_2025.png
+- Neighborhood map: personal_notebooks/outputs/neighborhood_air_quality_map.png
+- The notebook includes an auto-render Key Findings cell that prints the current top site and stats (BNAS, Median, P90, Healthy-day share) after execution, ensuring text stays consistent with tables/plots.
 
 Key Findings:
 
-- AQI varies substantially by site; top-ranked locations show very low typical exposure (median AQI) and a high share of healthy days (AQI ≤ 100).
-- The worst-of-day AQI methodology ensures spikes in any pollutant are reflected in daily exposure.
-- Current Top-ranked site by BNAS over 2024-01-01 → 2025-10-31 is strong.
+- Air quality varies substantially across sites; top sites generally show lower typical exposure and a higher share of healthy days.
+- Using worst-of-day AQI ensures peaks in any pollutant are reflected in the daily exposure and final score.
 
 ### 3. Boyi Sun - Infrastructure Analysis
 
